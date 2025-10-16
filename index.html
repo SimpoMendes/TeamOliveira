@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Oliveira - Personal Trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Team<span>Oliveira</span></div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Treinos</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#loja">Loja</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SLIDER FULLSCREEN -->
+    <div class="slider" id="home">
+        <div class="slides">
+            <div class="slide active">
+                <img src="img/imagem1.jpg" alt="Treino 1">
+                <div class="texto">Transforme seu corpo</div>
+            </div>
+            <div class="slide">
+                <img src="img/imagem2.jpeg" alt="Treino 2">
+                <div class="texto">Alcance seus objetivos</div>
+            </div>
+            <div class="slide">
+                <img src="img/imagem3.jpg" alt="Treino 3">
+                <div class="texto">Treinos personalizados</div>
+            </div>
+        </div>
+    </div>
+    <hr class="divider">
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre">
+        <h2>Sobre Mim</h2>
+        <div class="sobre-texo">
+            <p>
+                Olá! Sou Tarcício Oliveira, treinador profissional com paixão por transformar vidas através do
+                movimento e da disciplina. Com anos de experiência na área de treinamento físico, meu objetivo é
+                ajudar cada aluno a alcançar o seu melhor — seja para melhorar o condicionamento, emagrecer, ganhar
+                massa muscular ou simplesmente ter mais saúde e qualidade de vida.
+
+                <br>
+                <br>
+
+                Acredito que cada corpo é único, por isso desenvolvo programas personalizados, focados na realidade,
+                nas metas e nas limitações de cada pessoa. Mais do que treinar, quero educar, motivar e acompanhar
+                de perto a sua evolução. Se você está pronto para sair da zona de conforto e assumir o controle da
+                sua jornada fitness, conte comigo!
+            </p>
+            <img src="img/fitness1.png" alt="Treinamento">
+        </div>
+    </section>
+    <hr class="divider">
+    <!-- TREINOS -->
+    <section id="servicos" class="produtos">
+        <h2>Treinos Personalizados</h2>
+        <div class="grid1">
+            <div class="card1">
+                <img src="img/imagem4.jpg" alt="Treino Livre">
+                <h3>Treino Livre</h3>
+                <p>Lugar de amizades e superação.</p>
+            </div>
+            <div class="card1">
+                <img src="img/imagem5.jpg" alt="Treino Personalizado">
+                <h3>Treino Personalizado</h3>
+                <p>Acompanhamento individual e direcionado.</p>
+            </div>
+            <div class="card1">
+                <img src="img/imagem6.jpg" alt="Treino Direcionado">
+                <h3>Treino Direcionado</h3>
+                <p>Treine em qualquer lugar com eficiência.</p>
+            </div>
+        </div>
+        <br>
+        <div class="grid1">
+            <div class="card1">
+                <img src="img/imagem7.jpg" alt="Treino Dedicado">
+                <h3>Treino Dedicado</h3>
+                <p>Treine cada músculo com intensidade.</p>
+            </div>
+            <div class="card1">
+                <img src="img/imagem8.jpg" alt="Treino e Força">
+                <h3>Treino e Força</h3>
+                <p>Força e resistência lado a lado.</p>
+            </div>
+            <div class="card1">
+                <img src="img/imagem9.jpg" alt="Treino e Foco">
+                <h3>Treino e Foco</h3>
+                <p>O resultado vem com disciplina.</p>
+            </div>
+        </div>
+    </section>
+    <hr class="divider">
+    <!-- PLANOS -->
+    <section id="planos" class="planos">
+        <h2>Planos</h2>
+        <div class="grid1">
+            <div class="card1">
+                <h3>Plano Básico</h3>
+                <p class="preco">R$99/mês</p>
+                <p>Acesso à academia e treinos livres.</p>
+                <a href="#contato" class="btn">Assinar</a>
+            </div>
+            <div class="card1">
+                <h3>Plano Avançado</h3>
+                <p class="preco">R$149/mês</p>
+                <p>Treinos personalizados e acompanhamento semanal.</p>
+                <a href="#contato" class="btn">Assinar</a>
+            </div>
+            <div class="card1">
+                <h3>Plano Premium</h3>
+                <p class="preco">R$199/mês</p>
+                <p>Treinos individuais, acompanhamento diário e avaliação física completa.</p>
+                <a href="#contato" class="btn">Assinar</a>
+            </div>
+        </div>
+    </section>
+    <hr class="divider">
+    <!-- LOJA DE PRODUTOS -->
+    <section id="loja">
+        <h2>Loja</h2>
+        <div class="grid1">
+            <div class="card1" data-preco="50">
+                <img src="img/produto1.png" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do produto</p>
+                <div class="preco">R$50,00</div>
+                <a href="#" class="btn add-cart">Adicionar ao Carrinho</a>
+            </div>
+            <div class="card1" data-preco="80">
+                <img src="img/produto2.png" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>Descrição do produto</p>
+                <div class="preco">R$80,00</div>
+                <a href="#" class="btn add-cart">Adicionar ao Carrinho</a>
+            </div>
+            <div class="card1" data-preco="150">
+                <img src="img/produto3.png" alt="Produto 3">
+                <h3>Produto 3</h3>
+                <p>Descrição do produto</p>
+                <div class="preco">R$150,00</div>
+                <a href="#" class="btn add-cart">Adicionar ao Carrinho</a>
+            </div>
+        </div>
+
+        <!-- CARRINHO -->
+        <div id="carrinho">
+            <h3>Seu Carrinho</h3>
+            <ul id="itens-carrinho"></ul>
+            <div class="total">Total: R$<span id="total">0</span></div>
+            <button id="finalizar" class="btn">Finalizar Compra</button>
+        </div>
+    </section>
+    <hr class="divider">
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="depoimentos">
+        <h2>Depoimentos</h2>
+        <div class="depoimento-slider">
+            <div class="depoimento active">
+                <img src="img/antesdepois1.jpeg" alt="Treino e Foco">
+                <p>"O Tarcício mudou minha vida! Minha saúde e condicionamento melhoraram muito."</p>
+                <h4>- João Silva</h4>
+            </div>
+            <div class="depoimento">
+                <img src="img/antesdepois2.jpeg" alt="Treino e Foco">
+                <p>"Treinos personalizados que realmente funcionam. Recomendo a todos!"</p>
+                <h4>- Maria Oliveira</h4>
+            </div>
+            <div class="depoimento">
+                <img src="img/antesdepois3.jpeg" alt="Treino e Foco">
+                <p>"Excelente acompanhamento, motivação constante e resultados reais."</p>
+                <h4>- Lucas Souza</h4>
+            </div>
+        </div>
+    </section>
+    <hr class="divider">
+    <!-- GALERIA -->
+    <section class="galeria" id="galeria">
+        <h2>Galeria</h2>
+        <div class="grid">
+            <div class="card"><img src="img/imagem4.jpg" alt="Treino"></div>
+            <div class="card"><img src="img/imagem5.jpg" alt="Treino"></div>
+            <div class="card"><img src="img/imagem6.jpg" alt="Treino"></div>
+            <div class="card"><img src="img/imagem7.jpg" alt="Treino"></div>
+            <div class="card"><img src="img/imagem8.jpg" alt="Treino"></div>
+            <div class="card"><img src="img/imagem9.jpg" alt="Treino"></div>
+        </div>
+    </section>
+    <hr class="divider">
+    
+    <hr class="divider">
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+        <h2>Contato</h2>
+        <form action="https://formcarry.com/s/iSQDIsbTRcx" method="POST" class="formulario">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="redes-sociais">
+            <a href="https://www.facebook.com/sergiosimpo" target="_blank"><img src="img/facebook.svg"
+                    alt="Facebook"></a>
+            <a href="https://www.instagram.com/imperio_doces" target="_blank"><img src="img/Instagram.png"
+                    alt="Instagram"></a>
+            <a href="https://wa.me/5511992189603" target="_blank"><img src="img/whatsaap.png" alt="WhatsApp"></a>
+        </div>
+    </section>
+    <hr class="divider">
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="ano"></span> Treinador Tarcício Oliveira - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

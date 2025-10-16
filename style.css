@@ -1,0 +1,505 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background: #111;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #111;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+header .logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+header .logo span {
+    color: #f47421;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f47421;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+.sobre, .planos, .galeria {
+      background: linear-gradient(160deg, #111 30%, #f47421 100%);
+      color: white;
+      max-width: 100vw;
+    }
+    .loja {
+      background: linear-gradient(180deg, #202229 0%, #f47421 100%);
+      color: white;
+    }
+.divider {
+      border: none;
+      height: 4px;
+      background: linear-gradient(to right, transparent, #888, transparent);
+      margin: 0px 0;
+}
+/* ===== MENU MOBILE ===== */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+.slides,
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide .texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f47421;
+    text-shadow: 2px 2px 15px #000;
+    max-width: 90%;
+    z-index: 10;
+}
+
+/* ===== SEÇÕES ===== */
+section {
+    padding: 90px 5%;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #f47421;
+    margin-bottom: 50px;
+}
+
+/* ===== SOBRE ===== */
+.sobre-texo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.sobre-texo p {
+    text-align: justify;
+    font-size: 1.1rem;
+    max-width: 600px;
+    color: #ccc;
+}
+
+.sobre-texo img {
+    width: 400px;
+    height: 400px;
+    border-radius: 30px;
+    border: 2px solid #f47421;
+    object-fit: cover;
+}
+
+/* ===== CARDS ===== */
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card1 {
+    background-color: rgba(254, 254, 255, 0.08);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding-bottom: 20px;
+}
+
+.card1 h3 {
+    margin: 15px 0;
+    color: #f47421;
+}
+
+.card1 p {
+    padding: 0 15px;
+    color: #eee;
+}
+
+.card1 .preco {
+    font-size: 1.5rem;
+    color: #f47421;
+    margin: 10px 0;
+}
+
+.card1 a.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #f47421;
+    color: #111;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card1 a.btn:hover {
+    background: #f58d3b;
+}
+
+.card1:hover {
+    transform: scale(1.05);
+}
+
+/* ===== IMAGENS DOS PLANOS ===== */
+.card1 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #f47421;
+    border-radius: 10px 10px 0 0;
+}
+
+/* ===== IMAGENS DE PRODUTOS (LOJA) ===== */
+#loja .card1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* preenche o card proporcionalmente */
+    aspect-ratio: 1 / 1;
+    border-bottom: 2px solid #f47421;
+    border-radius: 10px 10px 0 0;
+    padding: 0;
+    background: none; /* sem fundo branco */
+    transition: transform 0.3s ease;
+}
+
+#loja .card1 img:hover {
+    transform: scale(1.05);
+}
+#carrinho {
+    margin-top: 40px;
+    background: rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+}
+
+#carrinho h3 {
+    color: #f47421;
+    margin-bottom: 15px;
+}
+
+#itens-carrinho {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+#itens-carrinho li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#carrinho .total {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+#carrinho .btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* ===== DEPOIMENTOS ===== */
+.depoimentos .depoimento-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.depoimentos .depoimento {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    opacity: 0;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.depoimento img{
+    border: 2px solid #f47421;
+    width: 400px;
+    height: 300px;
+
+    
+}
+
+.depoimentos .depoimento.active {
+    display: flex;
+    opacity: 1;
+}
+
+.depoimentos p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.depoimentos h4 {
+    color: #f47421;
+    font-weight: 600;
+}
+
+/* ===== GALERIA ===== */
+.galeria .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.galeria .card {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #f47421;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria .card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #f47421;
+}
+
+/* ===== CONTATO ===== */
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.contato input,
+.contato textarea {
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: #1a1a1a;
+    color: #fff;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contato input:focus,
+.contato textarea:focus {
+    border-color: #f47421;
+    box-shadow: 0 0 10px #f47421;
+}
+
+.contato button {
+    padding: 15px;
+    background: #f47421;
+    border: none;
+    color: #111;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contato button:hover {
+    background: #f58d3b;
+}
+#carrinho button {
+    padding: 15px;
+    background: #f47421;
+    border: none;
+    color: #111;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#carrinho button:hover {
+    background: #f58d3b;
+}
+
+.redes-sociais {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.redes-sociais a img {
+    width: 36px;
+    height: 36px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.redes-sociais a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ===== WHATSAPP FLUTUANTE ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+    transition: transform 0.3s;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 1024px) {
+    .slide .texto { font-size: 2.5rem; }
+    .slider { height: 70vh; }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        position: absolute;
+        top: 80px;
+        right: -100%;
+        width: 220px;
+        background: #111;
+        transition: 0.3s;
+        border-radius: 0 0 10px 10px;
+        padding: 20px 0;
+    }
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav ul li { margin: 15px 0; }
+    .menu-toggle { display: flex; }
+    header nav.active { right: 0; }
+    .sobre-texo { flex-direction: column; text-align: center;}
+    .sobre-texo img { width: 90%; height: auto; }
+    .slider { height: 60vh; }
+    .slide .texto { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+    header .logo { font-size: 1.5rem; }
+    .slider { height: 50vh; }
+    .slide .texto { font-size: 1.6rem; padding: 0 10px; }
+    h2 {font-size: 1.9rem;}
+    section { padding: 60px 5%; }
+    .grid, .grid1 { grid-template-columns: 1fr; }
+    .card1 img { height: 180px; }
+}
