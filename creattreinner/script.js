@@ -5,17 +5,6 @@ document.getElementById("ano").textContent = new Date().getFullYear();
 
 // Exercícios
 const exercicios = {
-  Hipertrofia: {
-    Peito: ["Supino Reto", "Supino Inclinado", "Crucifixo", "Flexão", "Supino Declinado"],
-    Costas: ["Puxada Frontal", "Remada Curvada", "Remada Unilateral", "Levantamento Terra", "Barra Fixa"],
-    Quadriceps: ["Agachamento", "Leg Press", "Cadeira Extensora"],
-    Posteriores: ["Stiff", "Avanço"],
-    Gluteos: ["Ponte Glútea", "Elevação Quadril"],
-    Ombros: ["Desenvolvimento Militar", "Elevação Lateral", "Elevação Frontal", "Remada Alta", "Arnold Press"],
-    Biceps: ["Rosca Direta", "Rosca Martelo", "Rosca Concentrada"],
-    Triceps: ["Tríceps Corda", "Tríceps Testa"],
-    Abdomen: ["Prancha", "Abdominal Supra", "Abdominal Infra", "Abdominal Oblíquo", "Prancha Lateral"]
-  },
   Emagrecimento: {
     Peito: ["Flexão", "Supino Inclinado leve", "Crucifixo com halteres leves", "Supino reto leve"],
     Costas: ["Remada baixa leve", "Puxada frente leve", "Barra fixa assistida", "Superman"],
@@ -26,14 +15,58 @@ const exercicios = {
     Biceps: ["Rosca Direta leve", "Rosca Martelo leve"],
     Triceps: ["Tríceps Testa leve", "Flexão diamante leve"],
     Abdomen: ["Prancha", "Abdominal Supra", "Abdominal Infra", "Mountain Climber"]
-  }
+  },
+  Hipertrofia: {
+    Peito: ["Supino Reto pesado", "Supino Inclinado com barra", "Crucifixo com halteres", "Flexão com peso"],
+    Costas: ["Remada curvada", "Puxada frente com carga", "Barra fixa", "Pullover com halteres"],
+    Quadriceps: ["Agachamento com barra", "Leg Press", "Avanço com barra"],
+    Posteriores: ["Stiff", "Mesa flexora", "Peso morto romeno"],
+    Gluteos: ["Hip Thrust", "Elevação quadril com barra", "Glute Kickback com carga"],
+    Ombros: ["Desenvolvimento Militar com barra", "Elevação lateral com halteres", "Arnold Press"],
+    Biceps: ["Rosca Direta com barra", "Rosca Alternada com halteres", "Rosca Scott"],
+    Triceps: ["Tríceps Testa", "Mergulho em paralelas", "Tríceps Corda"],
+    Abdomen: ["Abdominal Supra com peso", "Prancha com carga", "Abdominal Oblíquo com halteres"]
+  },
+  Força: {
+    Peito: ["Supino Reto pesado", "Supino Inclinado pesado", "Flexão com colete de peso"],
+    Costas: ["Barra fixa pesada", "Remada curvada com barra", "Peso morto"],
+    Quadriceps: ["Agachamento livre pesado", "Leg Press pesado", "Avanço com barra"],
+    Posteriores: ["Stiff pesado", "Peso morto romeno", "Mesa flexora com carga"],
+    Gluteos: ["Hip Thrust com barra", "Elevação quadril com peso", "Glute Kickback com carga"],
+    Ombros: ["Desenvolvimento Militar com barra pesada", "Elevação lateral com halteres pesados", "Push Press"],
+    Biceps: ["Rosca Direta pesada", "Rosca Alternada com carga", "Rosca Scott com barra"],
+    Triceps: ["Tríceps Testa pesado", "Mergulho em paralelas com peso", "Tríceps Corda pesada"],
+    Abdomen: ["Prancha com colete", "Abdominal Supra com peso", "Abdominal com roda"]
+  },
+  Resistência: {
+    Peito: ["Flexão contínua", "Supino com baixa carga e altas repetições", "Crucifixo com halteres leves e altas repetições"],
+    Costas: ["Remada baixa leve com altas repetições", "Puxada frente leve e contínua", "Superman por tempo prolongado"],
+    Quadriceps: ["Agachamento leve contínuo", "Afundo alternado contínuo", "Step-ups com repetições altas"],
+    Posteriores: ["Saltos step contínuos", "Polichinelo prolongado", "Good mornings leves e repetitivos"],
+    Gluteos: ["Ponte glútea com repetições altas", "Elevação quadril contínua", "Kickbacks leves"],
+    Ombros: ["Elevação lateral leve e contínua", "Desenvolvimento militar leve e repetitivo", "Elevação frontal leve por tempo"],
+    Biceps: ["Rosca Direta leve e repetitiva", "Rosca Martelo leve contínua"],
+    Triceps: ["Tríceps Testa leve e contínuo", "Flexão diamante leve e repetitiva"],
+    Abdomen: ["Prancha longa duração", "Abdominal Supra e Infra contínuo", "Mountain Climber por tempo prolongado"]
+  },
+  Calistenia: { 
+  Peito: ["Flexão normal", "Flexão inclinada", "Flexão declinada", "Flexão arqueada", "Flexão explosiva", "Flexão diamante"],
+  Costas: ["Pull-up", "Chin-up", "Remada invertida", "Front Lever tuck", "Superman"],
+  Quadriceps: ["Agachamento livre", "Agachamento com salto", "Pistol squat", "Avanço explosivo", "Step-up"],
+  Posteriores: ["Bridge", "Hip hinge unilateral", "Good morning com peso corporal"],
+  Gluteos: ["Ponte glútea", "Hip Thrust unilateral", "Kickback elevado", "Elevação quadril"],
+  Ombros: ["Handstand push-up", "Flexão pike", "Archer push-up", "Prancha com toque de ombro"],
+  Biceps: ["Pull-up supinado", "Chin-up pesado", "Australian pull-up", "Rosca com toalha"],
+  Triceps: ["Dips em paralelas", "Flexão diamante", "Pseudo planche push-up", "Flexão tríceps"],
+  Abdomen: ["Dragon flag", "L-sit", "Hanging leg raise", "Prancha", "Mountain Climber", "Abdominal Supra e Infra"]
+}
 };
 
 // Seleciona 4 exercícios aleatórios
 function escolher4(arr){
   const copia = arr.slice();
   const selecionados = [];
-  while(selecionados.length<4 && copia.length>0){
+  while(selecionados.length<5 && copia.length>0){
     const idx = Math.floor(Math.random()*copia.length);
     selecionados.push(copia.splice(idx,1)[0]);
   }
@@ -148,7 +181,7 @@ pdfBtn.addEventListener("click", ()=>{
   doc.setFont("helvetica","bold");
   doc.setFontSize(26);
   doc.setTextColor(255,106,0);
-  doc.text("Ficha de Treino - CreatTreinner",40,y);
+  doc.text("Ficha de Treino - Create Training",40,y);
   y += 35;
 
   // Info do aluno
