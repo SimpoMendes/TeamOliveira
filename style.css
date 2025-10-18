@@ -463,6 +463,90 @@ footer {
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
+/* ===== CREATTREINNER SECTION ===== */
+#ficha-treino {
+    padding: 80px 5%;
+    background: linear-gradient(160deg, #111 30%, #f47421 100%);
+    border-radius: 20px;
+    margin: 50px auto;
+    max-width: 1200px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+#ficha-treino h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+#ficha-treino p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #eee;
+}
+
+#ficha-treino button {
+    padding: 15px 30px;
+    background: #f47421;
+    border: none;
+    color: #111;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#ficha-treino button:hover {
+    background: #f58d3b;
+}
+
+/* Iframe container */
+#iframe-container {
+    margin-top: 30px;
+    border: 2px solid #f47421;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    #ficha-treino {
+        padding: 60px 5%;
+        border-radius: 15px;
+    }
+
+    #ficha-treino h2 {
+        font-size: 2rem;
+    }
+
+    #ficha-treino button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #iframe-container iframe {
+        height: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    #ficha-treino {
+        padding: 40px 5%;
+    }
+
+    #ficha-treino h2 {
+        font-size: 1.8rem;
+    }
+
+    #iframe-container iframe {
+        height: 500px;
+    }
+}
+
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 1024px) {

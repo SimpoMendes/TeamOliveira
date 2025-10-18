@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreatTreinner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CreatTreinner</h1>
+    <p>Ficha de treino personalizada em segundos</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Informações do Aluno</h2>
+      <form id="form-treino">
+        <div class="form-grid">
+          <label>Nome:</label><input type="text" id="nome" required>
+          <label>Idade:</label><input type="number" id="idade" required>
+          <label>Peso (kg):</label><input type="number" id="peso" required>
+          <label>Altura (cm):</label><input type="number" id="altura" required>
+          <label>Sexo:</label>
+          <select id="sexo" required>
+            <option>Masculino</option>
+            <option>Feminino</option>
+          </select>
+          <label>Objetivo:</label>
+          <select id="objetivo" required>
+            <option>Hipertrofia</option>
+            <option>Emagrecimento</option>
+            <option>Resistência</option>
+            <option>Reabilitação</option>
+          </select>
+          <label>Dias por semana:</label><input type="number" id="dias" min="1" max="7" value="3" required>
+          <label>Nível:</label>
+          <select id="nivel" required>
+            <option>Iniciante</option>
+            <option>Intermediário</option>
+            <option>Avançado</option>
+          </select>
+          <label>Equipamento:</label>
+          <select id="equipamento" required>
+            <option>Academia</option>
+            <option>Casa</option>
+          </select>
+        </div>
+        <button type="submit">Gerar Ficha</button>
+      </form>
+    </section>
+
+    <section id="ficha" class="hidden">
+      <h2>Ficha de Treino Gerada</h2>
+      <div id="resultado"></div>
+      <div class="btns">
+        <button id="imprimir">Imprimir</button>
+        <button id="baixar-pdf">Baixar PDF</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="ano"></span> CreatTreinner</p>
+  </footer>
+
+  <!-- jsPDF CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+</html>
