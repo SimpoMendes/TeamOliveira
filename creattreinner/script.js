@@ -66,7 +66,7 @@ const exercicios = {
 function escolher4(arr){
   const copia = arr.slice();
   const selecionados = [];
-  while(selecionados.length<5 && copia.length>0){
+  while(selecionados.length<4 && copia.length>0){
     const idx = Math.floor(Math.random()*copia.length);
     selecionados.push(copia.splice(idx,1)[0]);
   }
