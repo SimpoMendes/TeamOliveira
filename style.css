@@ -533,22 +533,12 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    #ficha-treino {
-        padding: 40px 5%;
-    }
 
-    #ficha-treino h2 {
-        font-size: 1.8rem;
-    }
-
-    #iframe-container iframe {
-        height: 500px;
-    }
-}
 
 
 /* ===== RESPONSIVO ===== */
+
+
 @media (max-width: 1024px) {
     .slide .texto { font-size: 2.5rem; }
     .slider { height: 70vh; }
@@ -586,4 +576,18 @@ footer {
     section { padding: 60px 5%; }
     .grid, .grid1 { grid-template-columns: 1fr; }
     .card1 img { height: 180px; }
+}
+
+@media (max-width: 480px) {
+    #ficha-treino {
+        padding: 40px 5%;
+    }
+
+    #ficha-treino h2 {
+        font-size: 1.8rem;
+    }
+
+    #iframe-container iframe {
+        height: 500px;
+    }
 }
