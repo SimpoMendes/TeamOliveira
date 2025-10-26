@@ -1,31 +1,77 @@
 <!DOCTYPE html>
+<!-- Define o tipo do documento como HTML5 -->
 <html lang="pt-BR">
+<!-- Define o idioma principal da página como português do Brasil -->
+
 <head>
   <meta charset="UTF-8">
+  <!-- Define o conjunto de caracteres (UTF-8 suporta acentos e caracteres especiais) -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Garante que o site seja responsivo em dispositivos móveis, ajustando o zoom e largura -->
+
   <title>Create Training</title>
+  <!-- Título exibido na aba do navegador -->
+
   <link rel="stylesheet" href="style.css">
+  <!-- Importa o arquivo de estilos principal (CSS externo) -->
 </head>
+
 <body>
+  <!-- Início do corpo da página -->
+
+  <!-- =============================== -->
+  <!-- Cabeçalho do site -->
+  <!-- =============================== -->
   <header>
     <h1>Create Training</h1>
+    <!-- Título principal da página -->
+
     <p>Ficha de treino personalizada em segundos</p>
+    <!-- Subtítulo explicativo -->
   </header>
 
+  <!-- =============================== -->
+  <!-- Conteúdo principal -->
+  <!-- =============================== -->
   <main>
+
+    <!-- =============================== -->
+    <!-- Seção do formulário -->
+    <!-- =============================== -->
     <section class="form-section">
       <h2>Informações do Aluno</h2>
+      <!-- Título da seção -->
+
+      <!-- Formulário principal para gerar a ficha -->
       <form id="form-treino">
         <div class="form-grid">
-          <label>Nome:</label><input type="text" id="nome" required>
-          <label>Idade:</label><input type="number" id="idade" required>
-          <label>Peso (kg):</label><input type="number" id="peso" required>
-          <label>Altura (cm):</label><input type="number" id="altura" required>
+          <!-- Container em grade para os campos do formulário -->
+
+          <!-- Campo de nome -->
+          <label>Nome:</label>
+          <input type="text" id="nome" required>
+
+          <!-- Campo de idade -->
+          <label>Idade:</label>
+          <input type="number" id="idade" required>
+
+          <!-- Campo de peso -->
+          <label>Peso (kg):</label>
+          <input type="number" id="peso" required>
+
+          <!-- Campo de altura -->
+          <label>Altura (cm):</label>
+          <input type="number" id="altura" required>
+
+          <!-- Campo de seleção de sexo -->
           <label>Sexo:</label>
           <select id="sexo" required>
             <option>Masculino</option>
             <option>Feminino</option>
           </select>
+
+          <!-- Campo de seleção de objetivo -->
           <label>Objetivo:</label>
           <select id="objetivo" required>
             <option>Hipertrofia</option>
@@ -34,40 +80,72 @@
             <option>Força</option>
             <option>Calistenia</option>
           </select>
-          <label>Dias por semana:</label><input type="number" id="dias" min="1" max="7" value="3" required>
+
+          <!-- Campo de número de dias de treino -->
+          <label>Dias por semana:</label>
+          <input type="number" id="dias" min="1" max="7" value="3" required>
+
+          <!-- Campo de nível do aluno -->
           <label>Nível:</label>
           <select id="nivel" required>
             <option>Iniciante</option>
             <option>Intermediário</option>
             <option>Avançado</option>
           </select>
+
+          <!-- Campo de seleção do tipo de equipamento -->
           <label>Equipamento:</label>
           <select id="equipamento" required>
             <option>Academia</option>
             <option>Casa</option>
           </select>
         </div>
+
+        <!-- Botão para enviar o formulário e gerar a ficha -->
         <button type="submit">Gerar Ficha</button>
       </form>
     </section>
 
+    <!-- =============================== -->
+    <!-- Seção da ficha de treino gerada -->
+    <!-- =============================== -->
     <section id="ficha" class="hidden">
+      <!-- Inicialmente oculta (classe "hidden"), será exibida após gerar o treino -->
+
       <h2>Ficha de Treino Gerada</h2>
+      <!-- Título da seção -->
+
       <div id="resultado"></div>
+      <!-- Container onde o JavaScript insere a ficha gerada dinamicamente -->
+
       <div class="btns">
+        <!-- Botões de ação -->
         <button id="imprimir">Imprimir</button>
+        <!-- Imprime a ficha diretamente pelo navegador -->
+
         <button id="baixar-pdf">Baixar PDF</button>
+        <!-- Gera um PDF da ficha com jsPDF -->
       </div>
     </section>
   </main>
 
+  <!-- =============================== -->
+  <!-- Rodapé -->
+  <!-- =============================== -->
   <footer>
-    <p>&copy; <span id="ano">@2025</span> Create Training</p>
+    <p>&copy; <span id="ano">@2025</span>Team Oliveira. Todos Direitos Reservados.<br>Desenvolvido Por SimpoMendes</br></p>
+    <!-- O span #ano é atualizado dinamicamente pelo JS com o ano atual -->
   </footer>
 
-  <!-- jsPDF CDN -->
+  <!-- =============================== -->
+  <!-- Importações de scripts -->
+  <!-- =============================== -->
+
+  <!-- Biblioteca jsPDF (CDN) - usada para gerar o PDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <!-- Script principal -->
+
+  <!-- Script principal do site (contém toda a lógica de geração da ficha) -->
   <script src="script.js"></script>
+
 </body>
 </html>

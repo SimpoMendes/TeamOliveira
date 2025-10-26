@@ -1,188 +1,249 @@
-/* style.css - CreatTreinner atualizado */
+/* ================================================== */
+/* style.css - Create Trainer PRO comentado linha a linha */
+/* Mantendo cores originais e melhorando responsividade */
+/* ================================================== */
 
+/* ===== VARIÁVEIS GLOBAIS ===== */
+:root {
+  --bg: #121212;          /* Fundo geral da página */
+  --card-bg: #1e1e1e;     /* Fundo de cards e seções */
+  --input-bg: #2a2a2a;    /* Fundo de inputs e selects */
+  --accent: #ff6a00;      /* Cor principal para destaques e botões */
+  --accent-light: #ffd966;/* Cor secundária para subtítulos e destaques */
+  --text: #fff;           /* Cor principal do texto */
+  --text-muted: #ccc;     /* Cor secundária do texto */
+  --border-radius: 12px;  /* Bordas arredondadas padrão */
+  --shadow-light: 0 4px 10px rgba(0,0,0,0.5); /* Sombra leve */
+  --shadow-medium: 0 0 15px rgba(0,0,0,0.6);  /* Sombra média */
+  --shadow-strong: 0 8px 20px rgba(0,0,0,0.7); /* Sombra forte */
+  --transition: 0.3s;     /* Transição padrão para hover e focus */
+  --font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+/* ===== RESET GLOBAL ===== */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;  /* Inclui padding e border no cálculo de largura e altura */
+  margin: 0;               /* Remove margem padrão */
+  padding: 0;              /* Remove padding padrão */
+  font-family: var(--font-family); /* Aplica fonte padrão */
 }
 
+/* ===== CORPO ===== */
 body {
-  background: #121212;
-  color: #fff;
-  line-height: 1.5;
+  background: var(--bg);    /* Define fundo do site */
+  color: var(--text);       /* Cor do texto principal */
+  line-height: 1.5;         /* Espaçamento entre linhas */
+  padding: 1rem;            /* Espaçamento interno da página */
 }
 
+/* ===== CABEÇALHO ===== */
 header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #1e1e1e;
-  border-bottom: 3px solid #ff6a00;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  text-align: center;                     /* Centraliza todo conteúdo do header */
+  padding: 2rem 1rem;                     /* Espaçamento interno vertical e horizontal */
+  background: var(--card-bg);             /* Fundo do header */
+  border-bottom: 3px solid var(--accent); /* Linha laranja na base */
+  box-shadow: var(--shadow-light);        /* Sombra para profundidade */
+  border-radius: var(--border-radius);    /* Bordas arredondadas */
 }
 
 header h1 {
-  color: #ff6a00;
-  font-size: 2.5rem;
+  color: var(--accent);                   /* Título em laranja */
+  font-size: clamp(1.8rem, 5vw, 2.5rem);  /* Fonte escalável para diferentes telas */
 }
 
 header p {
-  margin-top: 0.5rem;
-  color: #ccc;
-  font-size: 1.1rem;
+  margin-top: 0.5rem;                     /* Espaço acima do subtítulo */
+  color: var(--text-muted);               /* Cor cinza clara */
+  font-size: clamp(1rem, 3vw, 1.1rem);    /* Fonte escalável */
 }
 
+/* ===== CONTEÚDO PRINCIPAL ===== */
 main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1rem;
+  max-width: 1000px;                      /* Largura máxima do conteúdo */
+  margin: 2rem auto;                       /* Centraliza horizontalmente com espaçamento vertical */
+  padding: 0 1rem;                         /* Padding horizontal */
+  display: flex;                           /* Flex container para organizar seções */
+  flex-direction: column;                  /* Alinha seções verticalmente */
+  gap: 2rem;                               /* Espaço entre seções */
 }
 
+/* ===== SEÇÃO DO FORMULÁRIO ===== */
 .form-section {
-  background: #1e1e1e;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.6);
-  margin-bottom: 2rem;
-  transition: transform 0.3s;
+  background: var(--card-bg);             /* Fundo do formulário */
+  padding: 1.5rem;                        /* Espaçamento interno */
+  border-radius: var(--border-radius);    /* Bordas arredondadas */
+  box-shadow: var(--shadow-medium);       /* Sombra média */
+  transition: transform var(--transition); /* Transição suave ao passar o mouse */
 }
 
 .form-section:hover {
-  transform: scale(1.01);
+  transform: scale(1.01);                 /* Leve zoom no hover */
 }
 
 .form-section h2 {
-  color: #ff6a00;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+  color: var(--accent);                   /* Título laranja */
+  margin-bottom: 1rem;                    /* Espaço abaixo do título */
+  font-size: clamp(1.5rem, 4vw, 1.8rem);  /* Fonte escalável */
 }
 
+/* ===== GRID DO FORMULÁRIO ===== */
 .form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem 2rem;
+  display: grid;                           /* Layout em grid */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Colunas responsivas com mínimo de 180px */
+  gap: 1rem 2rem;                          /* Espaçamento vertical e horizontal */
 }
 
+/* ===== INPUTS E SELECTS ===== */
 input, select {
-  width: 100%;
-  padding: 0.6rem;
-  border-radius: 8px;
-  border: none;
-  background: #2a2a2a;
-  color: #fff;
-  font-size: 1rem;
-  transition: 0.3s;
+  width: 100%;                             /* Ocupa toda largura da célula do grid */
+  padding: 0.6rem;                         /* Espaçamento interno */
+  border-radius: 8px;                      /* Bordas arredondadas */
+  border: none;                            /* Sem borda visível */
+  background: var(--input-bg);             /* Fundo cinza escuro */
+  color: var(--text);                       /* Texto branco */
+  font-size: 1rem;                          /* Tamanho da fonte */
+  transition: var(--transition);            /* Transição suave */
 }
 
 input:focus, select:focus {
-  outline: 2px solid #ff6a00;
+  outline: 2px solid var(--accent);        /* Destaque laranja ao focar */
 }
 
+/* ===== BOTÕES ===== */
 button {
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  background: #ff6a00;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  color: #fff;
+  margin-top: 1rem;                        /* Espaço acima do botão */
+  padding: 0.8rem 1.5rem;                  /* Padding interno */
+  background: var(--accent);               /* Fundo laranja */
+  border: none;                             /* Sem borda */
+  border-radius: 8px;                       /* Bordas arredondadas */
+  font-weight: bold;                        /* Texto em negrito */
+  cursor: pointer;                          /* Cursor de clique */
+  transition: var(--transition);            /* Transição suave */
+  color: var(--text);                       /* Texto branco */
 }
 
 button:hover {
-  background: #d4a017;
+  background: #d4a017;                     /* Laranja mais claro no hover */
 }
 
+/* ===== FICHA GERADA ===== */
 #ficha {
-  background: #1e1e1e;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.6);
-  margin-top: 2rem;
+  background: var(--card-bg);              /* Fundo do card da ficha */
+  padding: 1rem;                            /* Espaçamento interno */
+  border-radius: var(--border-radius);     /* Bordas arredondadas */
+  box-shadow: var(--shadow-medium);        /* Sombra média */
 }
 
+/* ===== RESULTADO ===== */
 #resultado {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  margin-top: 1rem;                         /* Espaço acima */
+  display: flex;                             /* Flex container para cards */
+  flex-wrap: wrap;                           /* Quebra linha se necessário */
+  gap: 1rem;                                 /* Espaço entre cards */
+  justify-content: space-between;                   /* Centraliza cards horizontalmente */
 }
 
+/* ===== CARD ===== */
 .card {
-  background: #222;
-  border: 2px solid #ff6a00;
-  border-radius: 12px;
-  padding: 1rem;
-  flex: 1 1 100%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #222;                         /* Fundo escuro */
+  border: 2px solid var(--accent);          /* Borda laranja */
+  border-radius: var(--border-radius);      /* Bordas arredondadas */
+  padding: 1rem;                             /* Espaçamento interno */
+  flex: 1 1 300px;                           /* Flexível, mínimo 300px */
+  box-shadow: var(--shadow-light);          /* Sombra leve */
+  transition: transform var(--transition), box-shadow var(--transition); /* Transições */
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  transform: translateY(-5px);              /* Eleva card no hover */
+  box-shadow: var(--shadow-strong);         /* Sombra mais intensa */
 }
 
 .card h4 {
-  color: #ff6a00;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  border-bottom: 1px solid #ff6a00;
-  padding-bottom: 0.2rem;
+  color: var(--accent);                     /* Título do dia em laranja */
+  margin-bottom: 0.5rem;                     /* Espaço abaixo */
+  font-size: clamp(1.2rem, 3vw, 1.5rem);    /* Fonte escalável */
+  border-bottom: 1px solid var(--accent);   /* Linha decorativa laranja */
+  padding-bottom: 0.2rem;                    /* Padding interno inferior */
 }
 
 .card h5 {
-  color: #ffd966;
-  margin-top: 0.8rem;
-  margin-bottom: 0.3rem;
-  font-size: 1.2rem;
+  color: var(--accent-light);               /* Subtítulo do grupo muscular */
+  margin-top: 0.8rem;                        /* Espaço acima */
+  margin-bottom: 0.3rem;                     /* Espaço abaixo */
+  font-size: clamp(1rem, 2.5vw, 1.2rem);    /* Fonte escalável */
 }
 
 .card ul {
-  margin-left: 1rem;
-  list-style-type: disc;
+  margin-left: 1rem;                         /* Recuo para lista */
+  list-style-type: disc;                     /* Marcadores padrão */
 }
 
 .card li {
-  margin-bottom: 0.3rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  margin-bottom: 0.3rem;                     /* Espaço entre itens */
+  display: flex;                             /* Flex para alinhar ícones ou vídeos */
+  align-items: center;                       /* Alinha verticalmente */
+  gap: 0.5rem;                               /* Espaço horizontal entre elementos */
 }
 
+/* ===== VÍDEOS NOS CARDS ===== */
 video {
-  border-radius: 8px;
-  background: #000;
-  margin-left: 0.5rem;
+  border-radius: 8px;                        /* Arredondamento */
+  background: #000;                           /* Fundo preto */
+  margin-left: 0.5rem;                        /* Espaço lateral */
+  max-width: 100%;                            /* Responsivo */
 }
 
+/* ===== BOTÕES DE AÇÃO ===== */
 .btns {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
+  margin-top: 1rem;                           /* Espaço acima */
+  display: flex;                               /* Flex container */
+  flex-wrap: wrap;                             /* Quebra linha se necessário */
+  gap: 1rem;                                   /* Espaço entre botões */
+  justify-content: center;                     /* Centraliza horizontalmente */
 }
 
+/* ===== RODAPÉ ===== */
 footer {
-  text-align: center;
-  padding: 1rem;
-  color: #aaa;
-  border-top: 1px solid #333;
-  margin-top: 2rem;
+  text-align: center;                          /* Centraliza texto */
+  padding: 1rem;                               /* Espaçamento interno */
+  color: #aaa;                                 /* Texto cinza */
+  border-top: 1px solid #333;                  /* Linha superior */
+  margin-top: 2rem;                            /* Espaço acima */
 }
 
+/* ===== CLASSE AUXILIAR ===== */
 .hidden {
-  display: none;
+  display: none;                               /* Oculta elementos */
 }
 
+/* ===== RESPONSIVIDADE ===== */
 @media(max-width: 700px){
   .form-grid{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;               /* Inputs empilhados em telas pequenas */
   }
   .card {
-    flex: 1 1 100%;
+    flex: 1 1 100%;                           /* Cards ocupam 100% da largura */
   }
   video {
-    width: 100% !important;
+    width: 100% !important;                   /* Vídeos 100% da largura */
+  }
+}
+
+@media(max-width: 500px){
+  header h1 {
+    font-size: 1.8rem;                        /* Tamanho menor em celulares */
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .form-section h2 {
+    font-size: 1.5rem;
+  }
+  .card h4 {
+    font-size: 1.2rem;
+  }
+  .card h5 {
+    font-size: 1rem;
   }
 }
