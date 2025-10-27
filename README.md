@@ -7,7 +7,7 @@ O projeto se destaca por um **design moderno, responsivo e funcional**, oferecen
 
 ## 🌐 Demonstração
 
-🔗 **Acesse o site:** [https://seu-link-aqui.com]((https://simpomendes.github.io/TeamOliveira/))  
+🔗 **Acesse o site:** (https://simpomendes.github.io/TeamOliveira/)
 *(Substitua pelo link real do deploy — GitHub Pages, Netlify ou Vercel)*
 
 ---
