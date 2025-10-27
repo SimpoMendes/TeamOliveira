@@ -7,7 +7,7 @@ O projeto se destaca por um **design moderno, responsivo e funcional**, oferecen
 
 ## 🌐 Demonstração
 
-🔗 **Acesse o site:** [https://seu-link-aqui.com](https://seu-link-aqui.com)  
+🔗 **Acesse o site:** [https://seu-link-aqui.com]((https://simpomendes.github.io/TeamOliveira/))  
 *(Substitua pelo link real do deploy — GitHub Pages, Netlify ou Vercel)*
 
 ---
@@ -64,7 +64,7 @@ O **Team Oliveira** foi criado para representar a marca pessoal do treinador **T
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/team-oliveira.git
+   git clone https://github.com/SimpoMendes/team-oliveira.git
 
 
 ## 🧩 Estrutura do Projeto
