@@ -8,7 +8,7 @@ O projeto se destaca por um **design moderno, responsivo e funcional**, oferecen
 ## 🌐 Demonstração
 
 🔗 **Acesse o site:** (https://simpomendes.github.io/TeamOliveira/)
-*(Substitua pelo link real do deploy — GitHub Pages, Netlify ou Vercel)*
+
 
 ---
 
@@ -38,13 +38,15 @@ O **Team Oliveira** foi criado para representar a marca pessoal do treinador **T
 - **Rodapé dinâmico** com o ano atualizado automaticamente  
 
 ---
+## 🧩 Estrutura do Projeto
 
-/
+
 ├── index.html # Estrutura principal do site
 ├── style.css # Estilos e layout responsivo
 ├── script.js # Funcionalidades em JavaScript (menu, slider, carrinho)
 ├── /img # Imagens e ícones do projeto
 └── README.md # Documentação
+
 
 
 ---
@@ -67,5 +69,5 @@ O **Team Oliveira** foi criado para representar a marca pessoal do treinador **T
    git clone https://github.com/SimpoMendes/team-oliveira.git
 
 
-## 🧩 Estrutura do Projeto
+
 
